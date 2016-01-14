@@ -29,3 +29,9 @@
 .content {
   border-left: #000 dotted 1px;
 }
+
+#block {
+  background-color: rgba(128, 128, 128, 0.19);
+  width: 90%;
+  font-size: 12px;
+}
