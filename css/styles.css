@@ -46,7 +46,7 @@
   max-width: 50%
 }
 
-.yes, .no {
+.yes, .no, .nope {
   display:none;
 }
 

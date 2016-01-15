@@ -1,5 +1,5 @@
 $(function() {
-  $("button#alert").click(function(event) {
+  $("button#alert").click(function() {
     alert("I'm in alert!")
   });
 
@@ -15,27 +15,33 @@ $(function() {
     $(".caps").after(userCaps);
   });
 
-  $("button#searchengine").click(function() {
-    var names = ["Izzy", "Simon", "Anna", "Tyler", "Jessica", "Tim", "Brooke", "Jordan", "Neil", "Will", "Kevin", "Cate", "Taylor", "Pablo"]
-    var usersName = $("input#searchengine").val();
-      for (var i = 0; i < 14; i++) {
-        if (usersName == names[i]) {
-          alert("Your name is on the list!");
-        } else {
-          alert("Sorry loser!");
-        };
-      };
-  });
-
   $("button#beer").click(function() {
     var userAge = parseInt(prompt("Hold on! How old are you?"));
     if (userAge >= 21) {
       $(".yes").show();
     }
-    else {
+    else if (userAge < 21) {
       $(".no").show();
     }
-
+    else {
+      $('.nope').show();
+    }
   });
 
+  $("button#searchengine").click(function() {
+    var matchName;
+    var names = ["Izzy", "Simon", "Anna", "Tyler", "Jessica", "Tim", "Brooke", "Jordan", "Neil", "Will", "Kevin", "Cate", "Taylor", "Pablo"]
+    var usersName = $("input#userName").val();
+      for (var i = 0; i < 14; i++) {
+        if (i == usersName) {
+          var matchName = 1;
+        };
+      };
+
+      if (1 == matchName) {
+        alert("Your name is on the list!");
+      } else {
+        alert("Sorry loser!");
+      };
+  });
 });
