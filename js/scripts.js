@@ -1,5 +1,5 @@
 $(function() {
-  $("button#alert").click(function() {
+  $("button#alert").click(function(event) {
     alert("I'm in alert!")
   });
 
@@ -15,5 +15,27 @@ $(function() {
     $(".caps").after(userCaps);
   });
 
+  $("button#searchengine").click(function() {
+    var names = ["Izzy", "Simon", "Anna", "Tyler", "Jessica", "Tim", "Brooke", "Jordan", "Neil", "Will", "Kevin", "Cate", "Taylor", "Pablo"]
+    var usersName = $("input#searchengine").val();
+      for (var i = 0; i < 14; i++) {
+        if (usersName == names[i]) {
+          alert("Your name is on the list!");
+        } else {
+          alert("Sorry loser!");
+        };
+      };
+  });
+
+  $("button#beer").click(function() {
+    var userAge = parseInt(prompt("Hold on! How old are you?"));
+    if (userAge >= 21) {
+      $(".yes").show();
+    }
+    else {
+      $(".no").show();
+    }
+
+  });
 
 });

@@ -6,9 +6,7 @@
   list-style-type: none;
 }
 
-body {
-  margin-right: 20%;
-}
+
 
 .jumbotron {
   margin-top: 2%;
@@ -16,6 +14,7 @@ body {
 
 .container {
   margin-top: 4%;
+  margin-right:20%;
 }
 
 .footer {
@@ -45,4 +44,14 @@ body {
 #floatright {
   float: right;
   max-width: 50%
+}
+
+.yes, .no {
+  display:none;
+}
+
+img {
+  max-width: 150px;
+  max-height: 150px;
+  margin-left: 30px;
 }
